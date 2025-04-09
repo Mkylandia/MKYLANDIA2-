@@ -23,7 +23,7 @@ const countdown = setInterval(function() {
         document.getElementById("seconds").textContent = "0";
         
         const countdownElement = document.querySelector(".countdown");
-        countdownElement.innerHTML = "<h2><i class='fas fa-check-circle'></i> 🎉 WIR SIND ONLINE! 🎉</h2><p>Tritt jetzt dem Server bei!</p>";
+        countdownElement.innerHTML = "<h3><i class='fas fa-check-circle'></i> 🎉 WIR SIND ONLINE! 🎉</h3><p>Tritt jetzt dem Server bei!</p>";
     }
 }, 1000);
 
@@ -38,103 +38,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax effect for header
+// Sticky header effect
+const header = document.querySelector('header');
+const logo = document.querySelector('.logo h1');
+
 window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const scrollPosition = window.scrollY;
-    
-    header.style.backgroundPosition = `center ${scrollPosition * 0.3}px`;
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+        logo.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+        logo.classList.remove('scrolled');
+    }
 });
 
-// Animation for gamemode cards
-const gamemodeCards = document.querySelectorAll('.gamemode-card');
-
-function checkIfInView() {
-    gamemodeCards.forEach(card => {
-        const cardPosition = card.getBoundingClientRect();
-        
-        // Check if card is in viewport
-        if(cardPosition.top < window.innerHeight && cardPosition.bottom >= 0) {
-            card.classList.add('visible');
-        }
-    });
-}
-
-// Initial check
-window.addEventListener('load', checkIfInView);
-window.addEventListener('scroll', checkIfInView);
-
-// Add visible class with animation in CSS
+// Add scrolled styles
 document.addEventListener('DOMContentLoaded', function() {
     const style = document.createElement('style');
     style.textContent = `
-        .gamemode-card {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+        header.scrolled {
+            padding: 0.7rem 5%;
+            background-color: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
         }
         
-        .gamemode-card.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .logo h1.scrolled {
+            font-size: 1.8rem;
         }
     `;
     document.head.appendChild(style);
 });
 
-// Feature boxes hover effect
-const featureBoxes = document.querySelectorAll('.feature-box');
-
-featureBoxes.forEach(box => {
-    box.addEventListener('mouseenter', function() {
-        const icon = this.querySelector('.feature-icon');
-        icon.classList.add('animate__animated', 'animate__rubberBand');
-        
-        // Remove the classes after animation completes
-        setTimeout(() => {
-            icon.classList.remove('animate__animated', 'animate__rubberBand');
-        }, 1000);
-    });
-});
-
-// Add fire particles for buttons on hover
-const buttons = document.querySelectorAll('.btn');
-
-buttons.forEach(button => {
-    button.addEventListener('mouseenter', function() {
-        this.classList.add('fire-effect');
-    });
+// Scroll animation for sections
+const animateOnScroll = function() {
+    const elements = document.querySelectorAll('.gamemode-card, .feature-box');
     
-    button.addEventListener('mouseleave', function() {
-        this.classList.remove('fire-effect');
-    });
-});
-
-// Add fire effect styles
-document.addEventListener('DOMContentLoaded', function() {
-    const style = document.createElement('style');
-    style.textContent = `
-        .fire-effect {
-            position: relative;
-            overflow: hidden;
-        }
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect();
         
-        .fire-effect:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-        
-        .fire-effect:hover:before {
-            opacity: 0.3;
-        }
-    `;
-    document.head.appendChild(style);
-});
+        // If element is in viewport
+        if (position.top < window.innerHeight -
