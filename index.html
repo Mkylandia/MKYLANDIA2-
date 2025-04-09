@@ -1,238 +1,210 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYLANDIA2 - Dein ultimatives Minecraft-Abenteuer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYLANDIA2 - Dein ultimatives Minecraft-Abenteuer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>MYLANDIA2</h1>
-            <p class="slogan">Dein neues Abenteuer beginnt!</p>
+  <header>
+    <div class="logo">
+      <h1>MYLANDIA2</h1>
+      <p class="slogan">Dein neues Abenteuer beginnt!</p>
+    </div>
+    <!-- Mobile Menü Toggle -->
+    <div class="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gamemodes">Spielmodi</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#server">Server</a></li>
+        <li><a href="https://discord.gg/wqXh65gXzM" target="_blank" class="discord-btn">
+          <i class="fab fa-discord"></i> Discord</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero fade-in">
+    <div class="container">
+      <div class="hero-content">
+        <h2>🌟 Entdecke MYLANDIA2 🌟</h2>
+        <p>Erlebe das ultimative Minecraft-Abenteuer mit uns!</p>
+        <div class="hero-buttons">
+          <a href="#gamemodes" class="btn btn-glow"><i class="fas fa-gamepad"></i> Spielmodi entdecken</a>
+          <a href="https://discord.gg/wqXh65gXzM" target="_blank" class="btn btn-discord btn-glow">
+            <i class="fab fa-discord"></i> Discord beitreten</a>
         </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gamemodes">Spielmodi</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="https://discord.gg/wqXh65gXzM" target="_blank" class="discord-btn"><i class="fab fa-discord"></i> Discord</a></li>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spielmodi Section -->
+  <section id="gamemodes" class="section fade-in">
+    <div class="container">
+      <div class="section-title">
+        <h2><i class="fas fa-dice-d20"></i> Unsere Spielmodi</h2>
+        <p>Wähle aus verschiedenen Modi für einzigartige Spielerlebnisse.</p>
+      </div>
+      <div class="gamemodes-grid">
+        <div class="gamemode-card fade-in">
+          <div class="gamemode-icon">
+            <i class="fas fa-island-tropical"></i>
+          </div>
+          <div class="gamemode-content">
+            <h3>Skyblock</h3>
+            <p>Erstelle deine eigene Inselwelt und beweise dein Können!</p>
+            <ul class="gamemode-features">
+              <li>Baue, sammle und überlebe hoch über den Wolken.</li>
+              <li>Erweitere deine Insel und meistere Herausforderungen.</li>
+              <li>Werde zum König deiner eigenen Inselwelt!</li>
             </ul>
-        </nav>
-    </header>
-    
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>🌟 Entdecke MYLANDIA2 🌟</h2>
-                <p>Dein ultimatives Minecraft-Abenteuer beginnt am 11.04.2025!</p>
-                
-                <div class="countdown">
-                    <h3><i class="fas fa-hourglass-half"></i> Server-Launch Countdown</h3>
-                    <div class="countdown-timer">
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="days">0</span>
-                            <span>Tage</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="hours">0</span>
-                            <span>Stunden</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="minutes">0</span>
-                            <span>Minuten</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-number" id="seconds">0</span>
-                            <span>Sekunden</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-buttons">
-                    <a href="#gamemodes" class="btn"><i class="fas fa-gamepad"></i> Spielmodi entdecken</a>
-                    <a href="https://discord.gg/wqXh65gXzM" target="_blank" class="btn btn-accent"><i class="fab fa-discord"></i> Discord beitreten</a>
-                </div>
-                
-                <div class="server-info">
-                    <div class="info-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Release: 11. April 2025</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-server"></i>
-                        <span>IP: Kommt bald!</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
-    
-    <section id="gamemodes">
-        <div class="container">
-            <div class="section-title">
-                <h2><i class="fas fa-dice-d20"></i> Unsere Spielmodi</h2>
-                <p>MYLANDIA2 bietet dir verschiedene Spielmodi, die für jeden Spielertyp ein einzigartiges Erlebnis garantieren.</p>
-            </div>
-            
-            <div class="gamemodes-grid">
-                <div class="gamemode-card">
-                    <div class="gamemode-icon">
-                        <i class="fas fa-island-tropical"></i>
-                    </div>
-                    <div class="gamemode-content">
-                        <h3>Skyblock</h3>
-                        <p>Erstelle deine eigene Inselwelt und beweise deine Fähigkeiten!</p>
-                        <ul class="gamemode-features">
-                            <li>Baue, sammle und überlebe in der unendlichen Weite des Himmels.</li>
-                            <li>Meistere Herausforderungen, um deine Insel immer weiter auszubauen.</li>
-                            <li>Tausche mit Freunden oder freundlicher Konkurrenz und werde zum König der Inseln! 👑</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="gamemode-card">
-                    <div class="gamemode-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <div class="gamemode-content">
-                        <h3>BedWars</h3>
-                        <p>Teamwork und Strategie sind gefragt! 🛡️</p>
-                        <ul class="gamemode-features">
-                            <li>Schütze dein Bett und zerstöre die Betten deiner Gegner.</li>
-                            <li>Sammle Ressourcen, baue Verteidigungen und plane deine Angriffe clever.</li>
-                            <li>Gemeinsam zum Sieg – oder allein gegen alle! 🏰💥</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="gamemode-card">
-                    <div class="gamemode-icon">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <div class="gamemode-content">
-                        <h3>OneBlock</h3>
-                        <p>Ein Block, unendliche Möglichkeiten! 🌍</p>
-                        <ul class="gamemode-features">
-                            <li>Beginne auf einem einzigen Block und erkunde eine sich ständig verändernde Welt.</li>
-                            <li>Sammle Ressourcen, kämpfe gegen Monster und baue dein eigenes Reich auf.</li>
-                            <li>Sei der Erste, der das Geheimnis von OneBlock lüftet! 🔍💎</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="gamemode-card">
-                    <div class="gamemode-icon">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <div class="gamemode-content">
-                        <h3>Survival Multiplayer (SMP)</h3>
-                        <p>Klassisches Survival mal anders! 🌲🔥</p>
-                        <ul class="gamemode-features">
-                            <li>Erkunde eine riesige Open-World mit Freunden oder allein.</li>
-                            <li>Baue deine Basis, sammle Ressourcen und überlebe die Gefahren der Nacht.</li>
-                            <li>Gemeinschaftliche Projekte oder epische PvP-Kämpfe – alles ist möglich! 🏡⚔️</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="gamemode-card fade-in">
+          <div class="gamemode-icon">
+            <i class="fas fa-bed"></i>
+          </div>
+          <div class="gamemode-content">
+            <h3>BedWars</h3>
+            <p>Teamwork und Taktik entscheiden!</p>
+            <ul class="gamemode-features">
+              <li>Schütze dein Bett und zerstöre das der Gegner.</li>
+              <li>Sammle Ressourcen und plane deine Angriffe.</li>
+              <li>Gemeinsam zum Sieg oder einzig alleine!</li>
+            </ul>
+          </div>
         </div>
-    </section>
-    
-    <section id="features" class="features-section">
-        <div class="container">
-            <div class="section-title">
-                <h2><i class="fas fa-gem"></i> Was MYLANDIA2 besonders macht</h2>
-                <p>Unsere Mission ist es, dir das bestmögliche Minecraft-Erlebnis zu bieten.</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-box">
-                    <i class="fas fa-wand-magic-sparkles feature-icon"></i>
-                    <h3>Einzigartige Features</h3>
-                    <p>Jeder Gamemode wurde mit Liebe zum Detail entwickelt und bietet einzigartige Spielerlebnisse, die du so noch nicht erlebt hast.</p>
-                </div>
-                
-                <div class="feature-box">
-                    <i class="fas fa-users feature-icon"></i>
-                    <h3>Community-driven</h3>
-                    <p>Wir hören auf unsere Spieler und passen den Server regelmäßig an eure Wünsche und Bedürfnisse an.</p>
-                </div>
-                
-                <div class="feature-box">
-                    <i class="fas fa-shield-halved feature-icon"></i>
-                    <h3>Faire Regeln</h3>
-                    <p>Ein sicheres und freundliches Spielerlebnis für alle steht bei uns an erster Stelle. Unsere Moderatoren sorgen für ein angenehmes Miteinander.</p>
-                </div>
-                
-                <div class="feature-box">
-                    <i class="fas fa-gift feature-icon"></i>
-                    <h3>Daily Rewards</h3>
-                    <p>Belohnungen für tägliche Spieler! Logge dich jeden Tag ein und erhalte exklusive Belohnungen. 🎁</p>
-                </div>
-            </div>
+        <div class="gamemode-card fade-in">
+          <div class="gamemode-icon">
+            <i class="fas fa-cube"></i>
+          </div>
+          <div class="gamemode-content">
+            <h3>OneBlock</h3>
+            <p>Ein Block – unendliche Möglichkeiten!</p>
+            <ul class="gamemode-features">
+              <li>Starte auf einem einzigen Block und wachse.</li>
+              <li>Erkunde eine sich ständig verändernde Welt.</li>
+              <li>Lüfte das Geheimnis hinter OneBlock!</li>
+            </ul>
+          </div>
         </div>
-    </section>
-    
-    <section class="discord-section">
-        <div class="container">
-            <div class="discord-content">
-                <h2><i class="fab fa-discord"></i> Tritt unserer Community bei!</h2>
-                <p>Werde Teil unserer wachsenden Community auf Discord. Erhalte die neuesten Informationen, finde Spielpartner und beteilige dich an Diskussionen rund um MYLANDIA2!</p>
-                <a href="https://discord.gg/wqXh65gXzM" target="_blank" class="btn btn-discord">Discord beitreten</a>
-            </div>
+        <div class="gamemode-card fade-in">
+          <div class="gamemode-icon">
+            <i class="fas fa-tree"></i>
+          </div>
+          <div class="gamemode-content">
+            <h3>SMP</h3>
+            <p>Erlebe klassischen Survival-Spaß!</p>
+            <ul class="gamemode-features">
+              <li>Erkunde eine riesige Welt alleine oder mit Freunden.</li>
+              <li>Baue deine Basis und überlebe Monsterangriffe.</li>
+              <li>Erschaffe dein eigenes Abenteuer!</li>
+            </ul>
+          </div>
         </div>
-    </section>
-    
-    <section class="cta">
-        <div class="container">
-            <h2><i class="fas fa-calendar-day"></i> Merke dir das Datum: 11.04.2025</h2>
-            <p>Denn dann geht MYLANDIA2 online! Sei von Anfang an dabei und erlebe den Start eines legendären Minecraft-Servers!</p>
-            
-            <div class="social-links">
-                <a href="https://discord.gg/wqXh65gXzM" target="_blank" class="social-link"><i class="fab fa-discord"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section section fade-in">
+    <div class="container">
+      <div class="section-title">
+        <h2><i class="fas fa-gem"></i> Unsere Features</h2>
+        <p>Erlebe exklusive Features und ein Community-getriebenes System.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-box fade-in">
+          <i class="fas fa-wand-magic-sparkles feature-icon"></i>
+          <h3>Einzigartige Spielerlebnisse</h3>
+          <p>Jeder Modus bietet dir ein einmaliges Abenteuer.</p>
         </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>MYLANDIA2</h3>
-                    <p>Dein ultimatives Minecraft-Abenteuer</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#gamemodes">Spielmodi</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="https://discord.gg/wqXh65gXzM" target="_blank">Discord</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>Kontakt</h4>
-                    <p><i class="fas fa-envelope"></i> info@mylandia2.com</p>
-                    <p><i class="fab fa-discord"></i> discord.gg/wqXh65gXzM</p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>#MYLANDIA2 #MinecraftServer #Skyblock #BedWars #OneBlock #SMP #GamingCommunity 🎮✨</p>
-                <p>© 2025 MYLANDIA2 - Alle Rechte vorbehalten</p>
-            </div>
+        <div class="feature-box fade-in">
+          <i class="fas fa-users feature-icon"></i>
+          <h3>Community-driven</h3>
+          <p>Deine Meinung zählt – wir passen uns deinen Wünschen an.</p>
         </div>
-    </footer>
-    
-    <script src="script.js"></script>
+        <div class="feature-box fade-in">
+          <i class="fas fa-shield-halved feature-icon"></i>
+          <h3>Sichere Spielumgebung</h3>
+          <p>Faire Regeln und ein straffes Moderationsteam sorgen für Sicherheit.</p>
+        </div>
+        <div class="feature-box fade-in">
+          <i class="fas fa-gift feature-icon"></i>
+          <h3>Tägliche Rewards</h3>
+          <p>Sichere dir täglich exklusive Belohnungen!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Server-Status Section -->
+  <section id="server" class="section fade-in">
+    <div class="container">
+      <div class="section-title">
+        <h2>🌐 Serverstatus</h2>
+        <p>Überprüfe, ob der Server online ist und kopiere die IP.</p>
+      </div>
+      <div class="server-info">
+        <p><strong>IP:</strong> <span id="server-ip">play.deinserver.net</span></p>
+        <button id="copy-ip" class="copy-btn btn-glow">🔗 IP Kopieren</button>
+        <p class="server-status">✅ Online</p> <!-- Dynamisch per JS anpassbar -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="cta section fade-in">
+    <div class="container">
+      <h2><i class="fas fa-calendar-day"></i> Sei dabei!</h2>
+      <p>Erlebe den Start eines legendären Minecraft-Servers und starte dein Abenteuer mit uns.</p>
+      <div class="social-links">
+        <a href="https://discord.gg/wqXh65gXzM" target="_blank" class="social-link">
+          <i class="fab fa-discord"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>MYLANDIA2</h3>
+          <p>Dein ultimatives Minecraft-Abenteuer</p>
+        </div>
+        <div class="footer-links">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gamemodes">Spielmodi</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#server">Server</a></li>
+            <li><a href="https://discord.gg/wqXh65gXzM" target="_blank">Discord</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Kontakt</h4>
+          <p><i class="fas fa-envelope"></i> info@mylandia2.com</p>
+          <p><i class="fab fa-discord"></i> discord.gg/wqXh65gXzM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>#MYLANDIA2 #MinecraftServer #GamingCommunity</p>
+        <p>© 2025 MYLANDIA2 - Alle Rechte vorbehalten</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
